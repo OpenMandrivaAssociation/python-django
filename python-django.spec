@@ -1,13 +1,13 @@
 %define oname django
 %define Oname Django
 %define name python-%oname
-%define version 0.95
-%define release %mkrel 2
+%define version 0.96
+%define rel 1
 
 Summary: A high-level Python Web framework
 Name: %{name}
 Version: %{version}
-Release: %{release}
+Release: %mkrel %rel 
 
 Source0: http://media.djangoproject.com/releases/%{version}/Django-%{version}.tar.bz2
 License: BSD
@@ -49,8 +49,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc LICENSE  README docs/*
 %_bindir/*
-%py_sitedir/%{oname}
+%py_puresitedir/%{oname}
 # used by setuptools
-%py_sitedir/%{Oname}-%{version}-py%{pyver}.egg-info
+%py_puresitedir/%{Oname}-*.egg-info
 
 
