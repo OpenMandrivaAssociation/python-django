@@ -51,7 +51,8 @@ rm -rf $RPM_BUILD_ROOT
 %_bindir/*
 %py_puresitedir/%{oname}
 # used by setuptools
-%if %pyver > 2.4
+%define python_ver  %(echo %pyver|sed s/\\\\\.//)
+%if %{python_ver} <= 25
 %py_puresitedir/%{Oname}-*.egg-info
-%fi
+%endif
 
