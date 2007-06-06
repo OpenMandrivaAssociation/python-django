@@ -51,6 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 %_bindir/*
 %py_puresitedir/%{oname}
 # used by setuptools
+%if %pyver > 2.4
 %py_puresitedir/%{Oname}-*.egg-info
-
+%fi
 
