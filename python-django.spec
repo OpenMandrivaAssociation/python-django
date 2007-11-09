@@ -1,7 +1,7 @@
 %define oname django
 %define Oname Django
 %define name python-%oname
-%define version 0.96
+%define version 0.96.1
 %define rel 1
 
 Summary: A high-level Python Web framework
@@ -9,7 +9,7 @@ Name: %{name}
 Version: %{version}
 Release: %mkrel %rel 
 
-Source0: http://media.djangoproject.com/releases/%{version}/Django-%{version}.tar.bz2
+Source0: http://media.djangoproject.com/releases/%{version}/Django-%{version}.tar.gz
 License: BSD
 Group: Development/Python
 BuildRoot: %{_tmppath}/%{name}-buildroot
