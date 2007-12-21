@@ -12,6 +12,7 @@ Release: %mkrel %rel
 Source0: http://media.djangoproject.com/releases/%{version}/Django-%{version}.tar.gz
 License: BSD
 Group: Development/Python
+BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildArch: noarch
 Url: http://www.djangoproject.com
 BuildRequires: python-devel
