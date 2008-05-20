@@ -1,7 +1,7 @@
 %define oname django
 %define Oname Django
 %define name python-%oname
-%define version 0.96.1
+%define version 0.96.2
 %define rel 1
 
 Summary: A high-level Python Web framework
