@@ -1,13 +1,13 @@
 %define oname django
 %define Oname Django
 %define name python-%oname
-%define version 0.96.2
+%define version 0.96.3
 %define rel 1
 
 Summary: A high-level Python Web framework
 Name: %{name}
 Version: %{version}
-Release: %mkrel %rel 
+Release: %mkrel %rel
 
 Source0: http://media.djangoproject.com/releases/%{version}/Django-%{version}.tar.gz
 License: BSD
@@ -19,16 +19,16 @@ BuildRequires: python-devel
 BuildRequires: python-setuptools
 
 %description
-Django is a high-level Python Web framework that encourages rapid development 
+Django is a high-level Python Web framework that encourages rapid development
 and clean, pragmatic design.
 
-Developed and used over the past two years by a fast-moving online-news 
-operation, Django was designed from scratch to handle two challenges: the 
+Developed and used over the past two years by a fast-moving online-news
+operation, Django was designed from scratch to handle two challenges: the
 intensive deadlines of a newsroom and the stringent requirements of experienced
-Web developers. It has convenient niceties for developing content-management 
+Web developers. It has convenient niceties for developing content-management
 systems, but it's an excellent tool for building any Web site.
 
-Django focuses on automating as much as possible and adhering to the 
+Django focuses on automating as much as possible and adhering to the
 DRY principle.
 
 %prep
@@ -40,7 +40,7 @@ python setup.py build
 
 %install
 rm -rf %buildroot
-python setup.py install --root=$RPM_BUILD_ROOT 
+python setup.py install --root=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
