@@ -50,9 +50,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc LICENSE  README docs/*
 %_bindir/*
 %py_puresitedir/%{oname}
-# used by setuptools
-%define python_ver  %(echo %pyver|sed s/\\\\\.//)
-%if %{python_ver} <= 25
 %py_puresitedir/%{Oname}-*.egg-info
-%endif
-
