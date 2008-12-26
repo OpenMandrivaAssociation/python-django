@@ -2,7 +2,7 @@
 %define Oname Django
 %define name python-%oname
 %define version 1.0
-%define rel 1
+%define rel 2
 
 Summary: A high-level Python Web framework
 Name: %{name}
@@ -15,7 +15,7 @@ Group: Development/Python
 BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildArch: noarch
 Url: http://www.djangoproject.com
-BuildRequires: python-devel
+%py_requires -d
 BuildRequires: python-setuptools
 
 %description
