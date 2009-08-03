@@ -1,14 +1,14 @@
 %define oname django
 %define Oname Django
 %define name python-%oname
-%define version 1.0.2
+%define version 1.1
 %define rel 1
 
 Summary: A high-level Python Web framework
 Name: %{name}
 Version: %{version}
 Release: %mkrel %rel
-Source0: http://media.djangoproject.com/releases/%{version}/Django-%{version}-final.tar.gz
+Source0: http://media.djangoproject.com/releases/%{version}/%Oname-%{version}.tar.gz
 License: BSD
 Group: Development/Python
 BuildRoot: %{_tmppath}/%{name}-buildroot
@@ -31,7 +31,7 @@ Django focuses on automating as much as possible and adhering to the
 DRY principle.
 
 %prep
-%setup -q -n %Oname-%version-final
+%setup -q -n %Oname-%version
 perl -pi -e 's/^(ez_setup.use_setuptools)/#$1/' setup.py
 
 %build
