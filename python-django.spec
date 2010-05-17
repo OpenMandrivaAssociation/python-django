@@ -1,8 +1,8 @@
 %define module	django
 %define tarname	Django
 %define name	python-%module
-%define version	1.1.1
-%define release	%mkrel 3
+%define version	1.2
+%define release	%mkrel 1
 
 Summary:	A high-level Python Web framework
 Name:		%{name}
