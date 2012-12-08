@@ -1,19 +1,18 @@
 %define module	django
 %define tarname	Django
 %define name	python-%module
-%define version	1.4.1
-%define stablev	1.4.1
+%define version	1.4.2
+%define stablev	1.4
 %define release	1
 
 Summary:	A high-level Python Web framework
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Source0:	http://www.djangoproject.com/download/%{stablev}/%{tarname}-%{version}.tar.gz
+Source0:	http://media.djangoproject.com/releases/%{stablev}/%{tarname}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		http://www.djangoproject.com
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch:	noarch
 BuildRequires:	python-setuptools, python-sphinx
 %py_requires -d
@@ -40,14 +39,9 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py build
 make -C docs/ html
 
 %install
-%__rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 
-%clean
-%__rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc LICENSE README docs/_build/html
 %_bindir/*
 %py_puresitedir/%{module}
