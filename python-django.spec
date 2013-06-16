@@ -3,7 +3,7 @@
 %define name	python-%module
 %define version	1.4.2
 %define stablev	1.4
-%define release	1
+%define release	2
 
 Summary:	A high-level Python Web framework
 Name:		%{name}
@@ -14,7 +14,8 @@ License:	BSD
 Group:		Development/Python
 Url:		http://www.djangoproject.com
 BuildArch:	noarch
-BuildRequires:	python-setuptools, python-sphinx
+BuildRequires:	python-distribute
+BuildRequires:	python-sphinx
 %py_requires -d
 
 %description
