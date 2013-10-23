@@ -43,7 +43,7 @@ make -C docs/ html
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 
 %files
-%doc LICENSE README docs/_build/html
+%doc LICENSE  docs/_build/html
 %_bindir/*
 %py_puresitedir/%{module}
 %py_puresitedir/%{tarname}-*.egg-info
