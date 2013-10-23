@@ -7,9 +7,9 @@
 
 Summary:	A high-level Python Web framework
 Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Source0:	http://media.djangoproject.com/releases/%{stablev}/%{tarname}-%{version}.tar.gz
+Version:	1.5.4
+Release:	1
+Source0:	https://pypi.python.org/packages/source/D/Django/Django-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		http://www.djangoproject.com
@@ -47,3 +47,4 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 %_bindir/*
 %py_puresitedir/%{module}
 %py_puresitedir/%{tarname}-*.egg-info
+

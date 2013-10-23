@@ -1,3 +1,5 @@
-sources:
-  "Django-1.4.tar.gz": acc0b854bfbda29c74c1f818323139cf18b38eeb
+removed_sources:
   Django-1.4.2.tar.gz: ccee9f589b819545f9d71d4aee2c2322e5cc2fd6
+  Django-1.4.tar.gz: acc0b854bfbda29c74c1f818323139cf18b38eeb
+sources:
+  Django-1.5.4.tar.gz: 18fcab95cebb8588ba827469837e7a81ad976cb9
