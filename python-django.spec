@@ -1,12 +1,8 @@
 %define module	django
 %define tarname	Django
-%define name	python-%module
-%define version	1.4.2
-%define stablev	1.4
-%define release	2
 
 Summary:	A high-level Python Web framework
-Name:		%{name}
+Name:		python-%{module}
 Version:	1.5.4
 Release:	1
 Source0:	https://pypi.python.org/packages/source/D/Django/Django-%{version}.tar.gz
@@ -16,7 +12,7 @@ Url:		http://www.djangoproject.com
 BuildArch:	noarch
 BuildRequires:	python-distribute
 BuildRequires:	python-sphinx
-%py_requires -d
+BuildRequires:  python-devel
 
 %description
 Django is a high-level Python Web framework that encourages rapid development
@@ -44,7 +40,7 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 
 %files
 %doc LICENSE  docs/_build/html
-%_bindir/*
-%py_puresitedir/%{module}
-%py_puresitedir/%{tarname}-*.egg-info
+%{_bindir/*
+%{py_puresitedir}/%{module}
+%{py_puresitedir}/%{tarname}-*.egg-info
 
