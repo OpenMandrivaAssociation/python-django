@@ -3,7 +3,7 @@
 %define name	python-%module
 %define version	1.4.2
 %define stablev	1.4
-%define release	2
+%define release	3
 
 Summary:	A high-level Python Web framework
 Name:		%{name}
