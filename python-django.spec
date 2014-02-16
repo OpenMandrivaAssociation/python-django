@@ -12,7 +12,7 @@ Source0:	https://pypi.python.org/packages/source/D/Django/Django-%{version}.tar.
 BuildArch:	noarch
 BuildRequires:	python-distribute
 BuildRequires:	python-sphinx
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python-2.7)
 
 %description
 Django is a high-level Python Web framework that encourages rapid development
