@@ -16,8 +16,7 @@ Url:		http://www.djangoproject.com
 BuildArch:	noarch
 BuildRequires:	python-distribute
 BuildRequires:	python-sphinx
-BuildRequires:  pkgconfig(python-2.7)
-%py_requires -d
+BuildRequires:  pkgconfig(python)
 
 %description
 Django is a high-level Python Web framework that encourages rapid development
