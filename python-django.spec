@@ -16,6 +16,7 @@ Url:		http://www.djangoproject.com
 BuildArch:	noarch
 BuildRequires:	python-distribute
 BuildRequires:	python-sphinx
+BuildRequires:  pkgconfig(python-2.7)
 %py_requires -d
 
 %description
