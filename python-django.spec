@@ -2,9 +2,10 @@
 %define tarname	Django
 
 Summary:	A high-level Python Web framework
+
 Name:		python-%{module}
-Version:	1.5.4
-Release:	5
+Version:	1.6.2
+Release:	1
 License:	BSD
 Group:		Development/Python
 Url:		http://www.djangoproject.com
@@ -43,4 +44,5 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 %{_bindir}/*
 %{py_puresitedir}/%{module}
 %{py_puresitedir}/%{tarname}-*.egg-info
+
 
