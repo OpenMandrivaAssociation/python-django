@@ -7,7 +7,7 @@ Summary:	A high-level Python Web framework
 
 Name:		python-%{module}
 Version:	1.6.5
-Release:	2
+Release:	3
 License:	BSD
 Group:		Development/Python
 Url:		http://www.djangoproject.com
