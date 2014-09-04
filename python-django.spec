@@ -6,8 +6,8 @@ Summary:	A high-level Python Web framework
 
 
 Name:		python-%{module}
-Version:	1.6.5
-Release:	2
+Version:	1.7
+Release:	1
 License:	BSD
 Group:		Development/Python
 Url:		http://www.djangoproject.com
@@ -15,7 +15,7 @@ Source0:	https://pypi.python.org/packages/source/D/Django/Django-%{version}.tar.
 BuildArch:	noarch
 BuildRequires:	python-distribute
 BuildRequires:	python-sphinx
-BuildRequires:	pkgconfig(python-2.7)
+BuildRequires:  python-devel
 
 %description
 Django is a high-level Python Web framework that encourages rapid development
