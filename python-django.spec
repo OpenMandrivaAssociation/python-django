@@ -6,7 +6,7 @@ Summary:	A high-level Python Web framework
 
 
 Name:		python-%{module}
-Version:	1.7
+Version:	1.7.11
 Release:	1
 License:	BSD
 Group:		Development/Python
