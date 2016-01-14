@@ -5,6 +5,7 @@ removed_sources:
   Django-1.6.2.tar.gz: 97473f15f924bacd56f43c30c07a098377fc6452
   Django-1.6.3.tar.gz: 80a5b6144d11be64207eb1208034677f5ca81c30
   Django-1.6.5.tar.gz: 3041078dc84da74983e2d0515e948c86beca60ff
+  Django-1.7.1.tar.gz: 689efc1e6d72b45b4deb451e6ed36ee77389fafc
   Django-1.7.tar.gz: 577b746814ebf33f0fd508090fbea8115ae234e4
 sources:
-  Django-1.7.1.tar.gz: 689efc1e6d72b45b4deb451e6ed36ee77389fafc
+  Django-1.9.1.tar.gz: 06457faee6998b922cb9c97a06116dd781618e07
