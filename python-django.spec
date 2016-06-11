@@ -6,12 +6,12 @@ Summary:	A high-level Python Web framework
 
 
 Name:		python-%{module}
-Version:	1.9.1
+Version:	1.9.7
 Release:	1
 License:	BSD
 Group:		Development/Python
 Url:		http://www.djangoproject.com
-Source0:	https://pypi.python.org/packages/source/D/Django/Django-%{version}.tar.gz
+Source0:	https://www.djangoproject.com/m/releases/%(echo %{version}|cut -d. -f1-2)/Django-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	python-distribute
 BuildRequires:	python-sphinx
