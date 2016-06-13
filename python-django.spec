@@ -16,6 +16,7 @@ BuildArch:	noarch
 BuildRequires:	python-distribute
 BuildRequires:	python-sphinx
 BuildRequires:  python-devel
+BuildRequires:	python-babel
 
 %description
 Django is a high-level Python Web framework that encourages rapid development
