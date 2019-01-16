@@ -5,12 +5,12 @@
 
 Summary:	A high-level Python Web framework
 Name:		python-%{module}
-Version:	1.9.7
-Release:	2
+Version:	1.11.18
+Release:	1
 License:	BSD
 Group:		Development/Python
 Url:		http://www.djangoproject.com
-Source0:	https://www.djangoproject.com/m/releases/%(echo %{version}|cut -d. -f1-2)/Django-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/source/D/Django/Django-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	python-distribute
 BuildRequires:	python-sphinx
@@ -68,20 +68,20 @@ cp -a python3 python2
 %build
 %if %{with python2}
 cd python2
-PYTHONDONTWRITEBYTECODE=1 %__python2 setup.py build
+PYTHONDONTWRITEBYTECODE=1 python2 setup.py build
 make -C docs/ html
 cd ..
 %endif
 
 cd python3
-PYTHONDONTWRITEBYTECODE=1 %__python setup.py build
+PYTHONDONTWRITEBYTECODE=1 %__%py_build
 make -C docs/ html
 cd ..
 
 %install
 %if %{with python2}
 cd python2
-PYTHONDONTWRITEBYTECODE=1 %__python2 setup.py install --root=%{buildroot}
+PYTHONDONTWRITEBYTECODE=1 python2 setup.py install --root=%{buildroot}
 cd ..
 cd %{buildroot}%{_bindir}
 for i in *; do
@@ -91,7 +91,7 @@ cd -
 %endif
 
 cd python3
-PYTHONDONTWRITEBYTECODE=1 %__python setup.py install --root=%{buildroot}
+PYTHONDONTWRITEBYTECODE=1 %__%py_install
 
 %files
 %doc python3/LICENSE python3/docs/_build/html

@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   Django-1.9.7.tar.gz: ea27c185acaf9ea39c692beca4c07ecf8974e72e
+sources:
+  Django-1.11.18.tar.gz: 705d631e290ba20e19c574f8bb2f2c26d281ddb1
