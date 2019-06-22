@@ -1,12 +1,12 @@
 %define module	django
 %define tarname	Django
 
-%bcond_without python2
+%bcond_with python2
 
 Summary:	A high-level Python Web framework
 Name:		python-%{module}
 Version:	1.9.7
-Release:	2
+Release:	1
 License:	BSD
 Group:		Development/Python
 Url:		http://www.djangoproject.com
