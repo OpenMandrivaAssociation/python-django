@@ -5,12 +5,12 @@
 
 Summary:	A high-level Python Web framework
 Name:		python-%{module}
-Version:	2.2.7
+Version:	3.0
 Release:	1
 License:	BSD
 Group:		Development/Python
 Url:		http://www.djangoproject.com
-Source0:	https://files.pythonhosted.org/packages/0d/05/5de305261e0a6bcd5701e2bfb5237e76303fde36f1f7c5a40ff86480ab5a/Django-2.2.7.tar.gz
+Source0:	https://files.pythonhosted.org/packages/f8/46/b3b8c61f867827fff2305db40659495dcd64fb35c399e75c53f23c113871/Django-3.0.tar.gz
 BuildArch:	noarch
 BuildRequires:	python-distribute
 BuildRequires:	python-sphinx
