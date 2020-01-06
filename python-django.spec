@@ -51,9 +51,7 @@ done
 %install
 %py3_install
 
-
 %files
-%doc python3/LICENSE python3/docs/_build/html
 %{_bindir}/*
 %{py_puresitedir}/%{module}
 %{py_puresitedir}/%{tarname}-*.egg-info
