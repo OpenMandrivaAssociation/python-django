@@ -29,14 +29,28 @@ Django focuses on automating as much as possible and adhering to the
 DRY principle.
 
 %prep
-%setup -qc
-sed -i 's/^\(ez_setup.use_setuptools\)/#\1/' %{tarname}-%{version}/setup.py
+%setup -q -n %{tarname}-%{version}
 
-PYTHONDONTWRITEBYTECODE=1 %__python setup.py build
-make -C docs/ html
+# drop bundled egg-info
+rm -rf Django.egg-info/
+
+# fix shebangs
+find . \( -name "*.py" -o -name "*.py-tpl" \) -exec sed -i -e '1s|#!.*python[2,3]\?|#!%{__python3}|' {} \;
+
+# empty files
+for f in \
+    django/contrib/staticfiles/models.py \
+    django/contrib/humanize/models.py \
+; do
+  echo "# just a comment" > $f
+done
+
+%build
+%py3_build
 
 %install
-PYTHONDONTWRITEBYTECODE=1 %__python setup.py install --root=%{buildroot}
+%py3_install
+
 
 %files
 %doc python3/LICENSE python3/docs/_build/html
