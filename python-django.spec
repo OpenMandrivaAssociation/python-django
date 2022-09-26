@@ -29,6 +29,7 @@ Django focuses on automating as much as possible and adhering to the
 DRY principle.
 
 %prep
+export LC_ALL=C.utf-8
 %autosetup -n %{tarname}-%{version}
 sed -i 's/^\(ez_setup.use_setuptools\)/#\1/' setup.py
 
