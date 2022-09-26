@@ -14,6 +14,7 @@ BuildRequires:	python-distribute
 BuildRequires:	python-sphinx
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python-babel
+BuildRequires:	python-pip
 
 %description
 Django is a high-level Python Web framework that encourages rapid development
