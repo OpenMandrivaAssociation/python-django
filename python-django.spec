@@ -3,7 +3,7 @@
 
 Summary:	A high-level Python Web framework
 Name:		python-%{module}
-Version:	4.2.6
+Version:	4.2.7
 Release:	1
 License:	BSD
 Group:		Development/Python
