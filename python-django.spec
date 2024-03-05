@@ -3,7 +3,7 @@
 
 Summary:	A high-level Python Web framework
 Name:		python-%{module}
-Version:	5.0.2
+Version:	5.0.3
 Release:	1
 License:	BSD
 Group:		Development/Python
