@@ -7,7 +7,7 @@ Version:	5.0.7
 Release:	1
 License:	BSD
 Group:		Development/Python
-Url:		http://www.djangoproject.com
+Url:		https://www.djangoproject.com
 Source0:	https://files.pythonhosted.org/packages/source/D/Django/Django-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	python-distribute
