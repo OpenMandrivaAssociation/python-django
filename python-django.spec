@@ -3,7 +3,7 @@
 
 Summary:	A high-level Python Web framework
 Name:		python-%{module}
-Version:	5.0.7
+Version:	5.1.4
 Release:	1
 License:	BSD
 Group:		Development/Python
@@ -32,7 +32,6 @@ DRY principle.
 %prep
 export LC_ALL=C.utf-8
 %autosetup -n %{tarname}-%{version}
-sed -i 's/^\(ez_setup.use_setuptools\)/#\1/' setup.py
 
 %build
 %py_build
