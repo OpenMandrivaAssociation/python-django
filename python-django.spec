@@ -10,6 +10,7 @@ Group:		Development/Python
 Url:		https://www.djangoproject.com
 Source0:	https://files.pythonhosted.org/packages/source/D/Django/Django-%{version}.tar.gz
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	python-distribute
 BuildRequires:	python-sphinx
 BuildRequires:	pkgconfig(python)
