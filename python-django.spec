@@ -1,21 +1,42 @@
 %define module django
-%define tarname Django
+%define oname Django
 
+Name:		python-django
 Summary:	A high-level Python Web framework
-Name:		python-%{module}
-Version:	5.1.7
-Release:	3
-License:	BSD
+Version:	6.0.1
+Release:	1
+License:	BSD-3-Clause
 Group:		Development/Python
-Url:		https://www.djangoproject.com
-Source0:	https://files.pythonhosted.org/packages/source/D/Django/Django-%{version}.tar.gz
+URL:		https://www.djangoproject.com
+Source0:	https://files.pythonhosted.org/packages/source/d/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+
 BuildArch:	noarch
+BuildSystem:	python
 BuildRequires:	make
-BuildRequires:	python-distribute
-BuildRequires:	python-sphinx
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python-babel
-BuildRequires:	python-pip
+BuildRequires:	python%{pyver}dist(asgiref)
+BuildRequires:	python%{pyver}dist(argon2-cffi)
+BuildRequires:	python%{pyver}dist(babel)
+BuildRequires:	python%{pyver}dist(bcrypt)
+BuildRequires:	python%{pyver}dist(jinja2)
+BuildRequires:	python%{pyver}dist(pillow)
+BuildRequires:	python%{pyver}dist(pyyaml)
+BuildRequires:	python%{pyver}dist(docutils)
+BuildRequires:	python%{pyver}dist(numpy)
+BuildRequires:	python%{pyver}dist(pytz)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(sphinx)
+BuildRequires:	python%{pyver}dist(sqlparse)
+BuildRequires:	python%{pyver}dist(tzdata)
+BuildRequires:	python%{pyver}dist(wheel)
+Requires:	python%{pyver}dist(asgiref)
+Requires:	python%{pyver}dist(sqlparse)
+Recommends:	python%{pyver}dist(argon2-cffi)
+Recommends:	python%{pyver}dist(bcrypt)
+Recommends:	python%{pyver}dist(jinja2)
+Recommends:	python%{pyver}dist(pillow)
+Recommends:	python%{pyver}dist(pyyaml)
 
 %description
 Django is a high-level Python Web framework that encourages rapid development
@@ -32,7 +53,9 @@ DRY principle.
 
 %prep
 export LC_ALL=C.utf-8
-%autosetup -n %{tarname}-%{version}
+%autosetup -n %{module}-%{version}
+# Remove bundled egg-info
+rm -rf %{oname}.egg-info
 
 %build
 %py_build
@@ -40,8 +63,18 @@ make -C docs/ html
 
 %install
 %py_install
+install -D -m 0644 extras/django_bash_completion %{buildroot}%{_datadir}/bash-completion/completions/django_bash_completion
+# Fix wrong script interpeter
+sed -i "s|^#!%{_bindir}/env python$|#!%{__python}|" %{buildroot}%{python_sitelib}/django/conf/project_template/manage.py-tpl
+
+mkdir -p %{buildroot}%{_mandir}/man1/
+cp -p docs/man/* %{buildroot}%{_mandir}/man1/
 
 %files
-%{_bindir}/*
-%{py_puresitedir}/%{module}
-%{py_puresitedir}/%{tarname}-*.dist-info
+%doc README.rst
+%license LICENSE LICENSE.python
+%{_bindir}/django-admin
+%{_datadir}/bash-completion/completions/django_bash_completion
+%{_mandir}/man1/django-admin.1*
+%{python_sitelib}/%{module}
+%{python_sitelib}/%{module}-%{version}.dist-info
