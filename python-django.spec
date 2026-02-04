@@ -3,7 +3,7 @@
 
 Name:		python-django
 Summary:	A high-level Python Web framework
-Version:	6.0.1
+Version:	6.0.2
 Release:	1
 License:	BSD-3-Clause
 Group:		Development/Python
@@ -51,18 +51,15 @@ systems, but it's an excellent tool for building any Web site.
 Django focuses on automating as much as possible and adhering to the
 DRY principle.
 
-%prep
+%prep -a
 export LC_ALL=C.utf-8
-%autosetup -n %{module}-%{version}
 # Remove bundled egg-info
 rm -rf %{oname}.egg-info
 
-%build
-%py_build
+%build -a
 make -C docs/ html
 
-%install
-%py_install
+%install -a
 install -D -m 0644 extras/django_bash_completion %{buildroot}%{_datadir}/bash-completion/completions/django_bash_completion
 # Fix wrong script interpeter
 sed -i "s|^#!%{_bindir}/env python$|#!%{__python}|" %{buildroot}%{python_sitelib}/django/conf/project_template/manage.py-tpl
