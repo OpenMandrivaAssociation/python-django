@@ -3,7 +3,7 @@
 
 Name:		python-django
 Summary:	A high-level Python Web framework
-Version:	6.0.5
+Version:	6.0.6
 Release:	1
 License:	BSD-3-Clause
 Group:		Development/Python
