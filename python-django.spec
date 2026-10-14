@@ -3,7 +3,7 @@
 
 Name:		python-django
 Summary:	A high-level Python Web framework
-Version:	6.0.7
+Version:	6.0.9
 Release:	1
 License:	BSD-3-Clause
 Group:		Development/Python
@@ -13,11 +13,10 @@ Source0:	https://files.pythonhosted.org/packages/source/d/%{module}/%{module}-%{
 BuildArch:	noarch
 BuildSystem:	python
 BuildRequires:	make
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(asgiref)
 BuildRequires:	python%{pyver}dist(argon2-cffi)
 BuildRequires:	python%{pyver}dist(babel)
-BuildRequires:	python%{pyver}dist(bcrypt)
 BuildRequires:	python%{pyver}dist(jinja2)
 BuildRequires:	python%{pyver}dist(pillow)
 BuildRequires:	python%{pyver}dist(pyyaml)
